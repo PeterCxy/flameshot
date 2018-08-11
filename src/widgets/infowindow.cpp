@@ -27,7 +27,7 @@
 
 InfoWindow::InfoWindow(QWidget *parent) : QWidget(parent) {
     setAttribute(Qt::WA_DeleteOnClose);
-    setWindowIcon(QIcon(":img/flameshot.png"));
+    setWindowIcon(QIcon(":img/app/flameshot.svg"));
     setWindowTitle(tr("About"));
 
     m_layout = new QVBoxLayout(this);
@@ -115,7 +115,7 @@ void InfoWindow::initLabels() {
     QLabel *versionTitleLabel = new QLabel(tr("<u><b>Version</b></u>"), this);
     versionTitleLabel->setAlignment(Qt::AlignHCenter);
     m_layout->addWidget(versionTitleLabel);
-    QString versionMsg = "Flameshot " + QString(APP_VERSION) + "\nCompiled with QT "
+    QString versionMsg = "Flameshot " + QString(APP_VERSION) + "\nCompiled with Qt "
             + QT_VERSION_STR;
     QLabel *versionLabel = new QLabel(versionMsg, this);
     versionLabel->setAlignment(Qt::AlignHCenter);
